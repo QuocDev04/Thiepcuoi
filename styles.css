@@ -913,12 +913,13 @@ footer {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    color: black;
 }
 
 .form-container h2 {
     margin-bottom: 25px;
     font-size: 1.8em;
-    color: #333;
+    color: black;
     text-align: center;
     font-family: 'Dancing Script', cursive;
 }
@@ -939,6 +940,7 @@ footer {
     font-size: 1rem;
     transition: all 0.3s ease;
     background: var(--white-off);
+    color: black;
 }
 
 .rsvp-form input:focus,
@@ -954,10 +956,11 @@ footer {
     line-height: 1.6;
     padding: 20px;
     font-size: 1.1rem;
+    color: black;
 }
 
 .rsvp-form textarea::placeholder {
-    color: #999;
+    color: black;
     font-style: italic;
     font-size: 1rem;
     opacity: 0.8;
@@ -1064,7 +1067,7 @@ footer {
 /* Hiệu ứng placeholder */
 .rsvp-form input::placeholder,
 .rsvp-form textarea::placeholder {
-    color: #999;
+    color: black;
     font-style: italic;
 }
 
@@ -1179,4 +1182,62 @@ footer {
         background-color: white;
         transform: translateY(0);
     }
+}
+
+.gallery {
+    padding: 2rem;
+}
+
+.upload-form {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.upload-form input[type="file"] {
+    margin-right: 1rem;
+}
+
+.upload-form button {
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.upload-form button:hover {
+    background-color: #45a049;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-item {
+    position: relative;
+    padding-top: 100%; /* Tạo khung hình vuông */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.wish-title {
+    color: black;
 } 
