@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiệp Cưới Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hero-section">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1 class="names">Nguyễn Tú & Minh Quân</h1>
+            <p class="wedding-date">08.03.2024</p>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span id="days"></span>
+                    <p>Ngày</p>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours"></span>
+                    <p>Giờ</p>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes"></span>
+                    <p>Phút</p>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds"></span>
+                    <p>Giây</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wedding-card">
+        <section class="couple-section">
+            <div class="couple-info">
+                <div class="bride">
+                    <div class="avatar"></div>
+                    <h3>Nguyễn Ngọc Anh</h3>
+                    <p>Con gái út của</p>
+                    <p>Ông bà: Nguyễn Văn A</p>
+                    <p>& Nguyễn Thị B</p>
+                </div>
+                <div class="heart-divider">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="groom">
+                    <div class="avatar"></div>
+                    <h3>Trần Minh Quân</h3>
+                    <p>Con trai trưởng của</p>
+                    <p>Ông bà: Trần Văn X</p>
+                    <p>& Trần Thị Y</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="event-details">
+            <div class="event-card">
+                <i class="fas fa-ring"></i>
+                <h3>Lễ Thành Hôn</h3>
+                <p class="time">09:00 AM - 20.10.2024</p>
+                <p class="location">Nhà thờ Lớn Hà Nội</p>
+                <p class="address">40 Phố Nhà Chung, Hoàn Kiếm, Hà Nội</p>
+                <button class="map-btn">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Xem bản đồ
+                </button>
+            </div>
+
+            <div class="event-card">
+                <i class="fas fa-glass-cheers"></i>
+                <h3>Tiệc Cưới</h3>
+                <p class="time">11:30 AM - 20.10.2024</p>
+                <p class="location">JW Marriott Hanoi</p>
+                <p class="address">8 Đỗ Đức Dục, Nam Từ Liêm, Hà Nội</p>
+                <button class="map-btn">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Xem bản đồ
+                </button>
+            </div>
+        </section>
+
+        <section class="love-story">
+            <h2>Câu Chuyện Tình Yêu</h2>
+            <div class="timeline">
+                <div class="story-item">
+                    <div class="date">15.08.2020</div>
+                    <h3>Lần Đầu Gặp Gỡ</h3>
+                    <p>Tại một quán café nhỏ ở phố cổ...</p>
+                </div>
+                <div class="story-item">
+                    <div class="date">25.12.2020</div>
+                    <h3>Hẹn Hò Đầu Tiên</h3>
+                    <p>Dạo phố đêm Giáng sinh...</p>
+                </div>
+                <div class="story-item">
+                    <div class="date">14.02.2023</div>
+                    <h3>Cầu Hôn</h3>
+                    <p>Dưới ánh hoàng hôn tại Hồ Tây...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <h2>Album Ảnh Cưới</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+            </div>
+        </section>
+
+        <section class="rsvp-section">
+            <h2>Xác Nhận Tham Dự</h2>
+            <form class="rsvp-form">
+                <input type="text" placeholder="Họ và tên">
+                <input type="tel" placeholder="Số điện thoại">
+                <textarea placeholder="Lời chúc gửi đến cô dâu chú rể"></textarea>
+                <button type="submit">Gửi xác nhận</button>
+            </form>
+        </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>Cảm ơn bạn đã đến chung vui cùng chúng tôi!</p>
+    </footer>
+    <script src="countdown.js"></script>
+</body>
+</html> 
