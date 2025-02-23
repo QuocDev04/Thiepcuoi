@@ -120,12 +120,14 @@
         <section class="wishes-section">
             <div class="wishes-wrapper">
                 <div class="form-container">
-                    <h2>Xác Nhận Tham Dự</h2>
+                    <h2>Gửi Lời Chúc</h2>
                     <form class="rsvp-form">
-                        <input type="text" placeholder="Nhập họ tên*">
-                        <input type="email" placeholder="Nhập email">
-                        <textarea placeholder="Nhập lời chúc của bạn*"></textarea>
-                        <button type="submit">Gửi lời chúc →</button>
+                        <input type="text" placeholder="Tên của bạn*" required>
+                        <textarea placeholder="Nhập lời chúc tới cô dâu chú rể*" required></textarea>
+                        <button type="submit">
+                            <span>Gửi lời chúc</span>
+                            <i class="fas fa-heart"></i>
+                        </button>
                     </form>
                 </div>
 
@@ -136,7 +138,7 @@
                         <div class="wish-reaction">
                             <span>↪</span>
                             <span class="reaction-emoji">😊</span>
-                            <span>cảm ơn</span>
+                            <span>Cảm ơn nha ạ</span>
                         </div>
                     </div>
 
@@ -173,5 +175,6 @@
         <p>Cảm ơn bạn đã đến chung vui cùng chúng tôi!</p>
     </footer>
     <script src="countdown.js"></script>
+    <script src="wishes.js"></script>
 </body>
 </html> 
