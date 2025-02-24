@@ -71,37 +71,29 @@ body {
 
 .countdown {
     display: flex;
-    gap: 20px;
     justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
 }
 
 .countdown-item {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-    min-width: 100px;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transform: translateY(0);
-    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 80px;
 }
 
-.countdown-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.countdown-item span {
+.countdown-number {
     font-size: 2.5rem;
-    color: #333;
     font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 5px;
 }
 
-.countdown-item p {
-    color: #666;
-    font-size: 0.9rem;
-    margin-top: 5px;
+.countdown-label {
+    font-size: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .wedding-card {
