@@ -232,8 +232,12 @@ body {
 
 .story-item {
     position: relative;
-    margin-bottom: 40px;
-    width: calc(50% - 30px);
+    text-align: center;
+    margin-bottom: 60px;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
@@ -242,7 +246,67 @@ body {
 }
 
 .story-item:hover {
-    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.story-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.story-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+    z-index: 2;
+}
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: none;
+    transition: transform 0.5s ease;
+}
+
+.story-content {
+    position: relative;
+    z-index: 3;
+    color: white;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.story-content .date {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.story-content h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.story-content p {
+    font-size: 1.1em;
 }
 
 .gallery-grid {
@@ -592,17 +656,15 @@ footer {
     }
 
     .story-item {
-        width: calc(100% - 40px);
-        margin-left: 40px;
-        padding-left: 30px;
+        height: 250px;
     }
 
-    .story-item:nth-child(odd) {
-        margin-left: 40px;
+    .story-content h3 {
+        font-size: 1.5em;
     }
-
-    .story-item::before {
-        left: -35px;
+    
+    .story-content p {
+        font-size: 1em;
     }
 
     /* Gallery */
@@ -1240,4 +1302,384 @@ footer {
 
 .wish-title {
     color: black;
+}
+
+.story-image {
+    margin-top: 0;
+    max-width: none;
+    box-shadow: none;
+}
+
+.story-image img {
+    height: 100%;
+}
+
+.story-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/* Thêm hiệu ứng hover */
+.story-item:hover .story-image img {
+    transform: scale(1.05);
+}
+
+.story-item:hover .story-image::before {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
+}
+
+.calendar-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+}
+
+.calendar-wrapper {
+    max-width: 450px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.1);
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.calendar-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, var(--pink-light), var(--pink-medium));
+}
+
+.calendar-header {
+    text-align: center;
+    padding: 10px 0 20px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #f5f5f5;
+}
+
+.calendar-header h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+    color: var(--pink-dark);
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #888;
+    margin-bottom: 15px;
+    padding: 10px 0;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.calendar-days div {
+    padding: 10px;
+    font-size: 1em;
+    color: #444;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.calendar-days div:hover:not(.highlighted) {
+    background: #f8f8f8;
+    cursor: pointer;
+}
+
+.calendar-days .highlighted {
+    background: linear-gradient(45deg, var(--pink-medium), var(--pink-light));
+    color: white;
+    font-weight: bold;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+    position: relative;
+}
+
+.calendar-days .highlighted::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 107, 107, 0.2);
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    70% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.countdown-numbers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #f5f5f5;
+}
+
+.countdown-numbers .countdown-item {
+    text-align: center;
+    background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+    padding: 10px 5px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.countdown-numbers .countdown-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.15);
+}
+
+.countdown-numbers .countdown-item span {
+    font-size: 1.6em;
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--pink-dark), var(--pink-medium));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.countdown-numbers .countdown-item p {
+    font-size: 0.8em;
+    color: #666;
+    margin: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 480px) {
+    .calendar-wrapper {
+        margin: 0 15px;
+        padding: 20px;
+    }
+
+    .calendar-header h2 {
+        font-size: 1.8em;
+    }
+
+    .calendar-days div {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9em;
+    }
+
+    .countdown-numbers {
+        gap: 10px;
+    }
+
+    .countdown-numbers .countdown-item {
+        padding: 10px 5px;
+    }
+
+    .countdown-numbers .countdown-item span {
+        font-size: 1.6em;
+    }
+
+    .countdown-numbers .countdown-item p {
+        font-size: 0.8em;
+    }
+}
+
+/* Điều chỉnh responsive cho iPhone */
+@media (max-width: 390px) { /* iPhone 14 width */
+    .calendar-wrapper {
+        margin: 0 10px;
+        padding: 15px;
+    }
+
+    .calendar-days div {
+        width: 30px; /* Giảm kích thước ô ngày */
+        height: 30px;
+        font-size: 0.85em;
+        padding: 5px;
+    }
+
+    .countdown-numbers {
+        gap: 5px; /* Giảm gap thêm nữa */
+    }
+
+    .countdown-numbers .countdown-item {
+        padding: 8px 2px;
+    }
+
+    .countdown-numbers .countdown-item span {
+        font-size: 1.4em;
+    }
+
+    .countdown-numbers .countdown-item p {
+        font-size: 0.7em;
+    }
+
+    .calendar-header h2 {
+        font-size: 1.5em;
+    }
+}
+
+.mung-cuoi-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+}
+
+.mung-cuoi-section h2 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5em;
+    color: var(--pink-dark);
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.mung-cuoi-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.mung-cuoi-item {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.mung-cuoi-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, var(--pink-light), var(--pink-medium));
+}
+
+.mung-cuoi-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 107, 107, 0.2);
+}
+
+.bank-info {
+    margin-bottom: 20px;
+}
+
+.bank-info h3 {
+    font-size: 1.5em;
+    color: var(--pink-dark);
+    margin-bottom: 15px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.bank-info p {
+    color: #666;
+    margin: 8px 0;
+    font-size: 1.1em;
+}
+
+.qr-code {
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.qr-code img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mung-cuoi-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .mung-cuoi-item {
+        padding: 20px;
+    }
+
+    .bank-info h3 {
+        font-size: 1.3em;
+    }
+
+    .bank-info p {
+        font-size: 1em;
+    }
+
+    .qr-code img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mung-cuoi-section h2 {
+        font-size: 2em;
+    }
+
+    .mung-cuoi-item {
+        padding: 15px;
+    }
+
+    .qr-code {
+        padding: 10px;
+    }
+
+    .qr-code img {
+        width: 150px;
+        height: 150px;
+    }
 } 

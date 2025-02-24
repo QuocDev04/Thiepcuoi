@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thiệp Cưới Online</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;500;600&display=swap"
         rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Sửa thẻ audio để tự động phát -->
+    <audio id="bgMusic" loop autoplay>
+        <source src="ido.mp3" type="audio/mp3">
+    </audio>
 </head>
 
 <body>
@@ -19,8 +25,8 @@
             <img src="https://cdn.pixabay.com/photo/2020/09/19/09/40/sunset-5584004_1280.jpg"
                 style="width: 100%; height: 100%; object-fit: cover;" alt="">
         </div>
-        <!-- <div class="hero-content">
-            <h1 class="names">Nguyễn Tú & Minh Quân</h1>
+        <div class="hero-content">
+            <h1 class="names">Ngọc Tú & Minh Quân</h1>
             <p class="wedding-date">08.03.2024</p>
             <div class="countdown">
                 <div class="countdown-item">
@@ -40,7 +46,7 @@
                     <p>Giây</p>
                 </div>
             </div>
-        </div> -->
+        </div>
     </div>
 
     <div class="wedding-card">
@@ -51,10 +57,10 @@
                         <img src="https://cdn.pixabay.com/photo/2016/06/29/04/17/wedding-dress-1485984_1280.jpg" alt=""
                             style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" />
                     </div>
-                    <h3>Nguyễn Ngọc Anh</h3>
+                    <h3>Ngọc Tú</h3>
                     <p>Con gái út của</p>
-                    <p>Ông bà: Nguyễn Văn A</p>
-                    <p>& Nguyễn Thị B</p>
+                    <p>Ông bà: Nguyễn Tiến Bạc</p>
+                    <p>& Đỗ Thị Nga</p>
                 </div>
                 <div class="heart-divider">
                     <i class="fas fa-heart"></i>
@@ -75,7 +81,7 @@
         <section class="event-details">
             <div class="event-card">
                 <i class="fas fa-ring"></i>
-                <h3>Lễ Thành Hôn</h3>
+                <h3>Địa chỉ đám cưới nhà trai</h3>
                 <p class="time">09:00 AM - 20.10.2024</p>
                 <p class="location">Nhà thờ Lớn Hà Nội</p>
                 <p class="address">40 Phố Nhà Chung, Hoàn Kiếm, Hà Nội</p>
@@ -87,7 +93,7 @@
 
             <div class="event-card">
                 <i class="fas fa-glass-cheers"></i>
-                <h3>Tiệc Cưới</h3>
+                <h3>Địa chỉ đám cưới nhà gái </h3>
                 <p class="time">11:30 AM - 20.10.2024</p>
                 <p class="location">JW Marriott Hanoi</p>
                 <p class="address">8 Đỗ Đức Dục, Nam Từ Liêm, Hà Nội</p>
@@ -102,19 +108,92 @@
             <h2>Câu Chuyện Tình Yêu</h2>
             <div class="timeline">
                 <div class="story-item">
-                    <div class="date">15.08.2020</div>
-                    <h3>Lần Đầu Gặp Gỡ</h3>
-                    <p>Tại một quán café nhỏ ở phố cổ...</p>
+                    <div class="story-image">
+                        <img src="https://images.pexels.com/photos/1024960/pexels-photo-1024960.jpeg" alt="Lần đầu gặp gỡ">
+                    </div>
+                    <div class="story-content">
+                        <div class="date">15.08.2020</div>
+                        <h3>Lần Đầu Gặp Gỡ</h3>
+                        <p>Tại một quán café nhỏ ở phố cổ...</p>
+                    </div>
                 </div>
                 <div class="story-item">
-                    <div class="date">25.12.2020</div>
-                    <h3>Hẹn Hò Đầu Tiên</h3>
-                    <p>Dạo phố đêm Giáng sinh...</p>
+                    <div class="story-image">
+                        <img src="https://images.pexels.com/photos/3052361/pexels-photo-3052361.jpeg" alt="Hẹn hò đầu tiên">
+                    </div>
+                    <div class="story-content">
+                        <div class="date">25.12.2020</div>
+                        <h3>Hẹn Hò Đầu Tiên</h3>
+                        <p>Dạo phố đêm Giáng sinh...</p>
+                    </div>
                 </div>
                 <div class="story-item">
-                    <div class="date">14.02.2023</div>
-                    <h3>Cầu Hôn</h3>
-                    <p>Dưới ánh hoàng hôn tại Hồ Tây...</p>
+                    <div class="story-image">
+                        <img src="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg" alt="Cầu hôn">
+                    </div>
+                    <div class="story-content">
+                        <div class="date">14.02.2023</div>
+                        <h3>Cầu Hôn</h3>
+                        <p>Dưới ánh hoàng hôn tại Hồ Tây...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="calendar-section">
+            <div class="calendar-wrapper">
+                <div class="calendar-header">
+                    <h2>MARCH / 2025</h2>
+                </div>
+                <div class="calendar">
+                    <div class="calendar-weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="calendar-days">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <div>7</div>
+                        <div class="highlighted">8</div>
+                        <div>9</div>
+                        <div>10</div>
+                        <div>11</div>
+                        <div>12</div>
+                        <div>13</div>
+                        <div>14</div>
+                        <div>15</div>
+                        <div>16</div>
+                        <div>17</div>
+                        <div>18</div>
+                        <div>19</div>
+                        <div>20</div>
+                        <div>21</div>
+                        <div>22</div>
+                        <div>23</div>
+                        <div>24</div>
+                        <div>25</div>
+                        <div>26</div>
+                        <div>27</div>
+                        <div>28</div>
+                        <div>29</div>
+                        <div>30</div>
+                        <div>31</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -174,7 +253,34 @@
                 </div>
             </div>
         </section>
+
+        <section class="mung-cuoi-section">
+            <h2>Hộp Mừng Cưới</h2>
+            <div class="mung-cuoi-container">
+                <div class="mung-cuoi-item">
+                    <div class="bank-info">
+                        <h3>Chú Rể: Trần Minh Quân</h3>
+                        <p>Ngân hàng: Vietcombank</p>
+                        <p>STK: 1234567890</p>
+                    </div>
+                    <div class="qr-code">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=1234567890" alt="QR Chú rể">
+                    </div>
+                </div>
+                <div class="mung-cuoi-item">
+                    <div class="bank-info">
+                        <h3>Cô Dâu: Ngọc Tú</h3>
+                        <p>Ngân hàng: Techcombank</p>
+                        <p>STK: 0987654321</p>
+                    </div>
+                    <div class="qr-code">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=0987654321" alt="QR Cô dâu">
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+
 
     <footer>
         <div class="social-links">
@@ -186,6 +292,40 @@
     </footer>
     <script src="countdown.js"></script>
     <script src="wishes.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const music = document.getElementById('bgMusic');
+            
+            // Tự động phát nhạc khi trang web tải xong
+            try {
+                music.play();
+            } catch (err) {
+                console.log("Autoplay prevented");
+            }
+
+            // Thêm event listener để phát nhạc khi có tương tác người dùng
+            document.addEventListener('click', function() {
+                music.play();
+            }, { once: true });
+        });
+    </script>
+
+    <!-- Thêm script Google Maps -->
+    <script>
+    // Xử lý click button map
+    const mapBtns = document.querySelectorAll('.map-btn');
+
+    mapBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const locationType = this.closest('.event-card').querySelector('h3').textContent.includes('nhà trai') 
+                ? 'https://maps.app.goo.gl/oinNyNBqFAzxMbXB6'  // Link địa chỉ nhà trai 
+                : 'https://maps.app.goo.gl/oinNyNBqFAzxMbXB6'; // Link địa chỉ nhà gái
+            
+            window.open(locationType, '_blank');
+        });
+    });
+    </script>
 </body>
 
 </html>

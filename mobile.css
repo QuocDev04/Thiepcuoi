@@ -1,0 +1,112 @@
+/* Styles cho điện thoại di động */
+@media screen and (max-width: 768px) {
+    /* Hero section */
+    .hero-content {
+        padding: 20px;
+    }
+
+    .names {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .wedding-date {
+        font-size: 1.5rem;
+    }
+
+    /* Countdown */
+    .countdown {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .countdown-item {
+        width: calc(50% - 15px);
+        padding: 10px;
+    }
+
+    .countdown-item span {
+        font-size: 1.8rem;
+    }
+
+    /* Couple section */
+    .couple-info {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .bride, .groom {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .avatar {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 15px;
+    }
+
+    .heart-divider {
+        margin: 20px 0;
+    }
+
+    /* Event details */
+    .event-details {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .event-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Love story */
+    .timeline {
+        padding: 20px;
+    }
+
+    .story-item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .gallery-item {
+        height: 150px;
+    }
+
+    /* Wishes section */
+    .wishes-wrapper {
+        padding: 20px;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    .rsvp-form input,
+    .rsvp-form textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 20px;
+    }
+
+    .social-links {
+        gap: 20px;
+    }
+
+    .social-links a {
+        font-size: 24px;
+    }
+} 

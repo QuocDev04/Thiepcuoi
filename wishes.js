@@ -5,21 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Dữ liệu mẫu ban đầu
     const initialWishes = [
         {
-            name: "minh",
-            message: "hellytgfjujkm",
-            timestamp: "2024-03-08T10:30:00Z"
-        },
-        {
-            name: "321321",
-            message: "Chúc mừng hạnh phúc! Chúc hai bạn trăm năm hạnh phúc!",
-            timestamp: "2024-03-08T10:25:00Z"
-        },
-        {
-            name: "3123",
-            message: "321323213dsadsa",
-            timestamp: "2024-03-08T10:20:00Z"
-        },
-        {
             name: "Nguyễn Mạnh Dũng",
             message: "Chúc mừng hạnh phúc",
             timestamp: "2024-03-08T10:15:00Z"
