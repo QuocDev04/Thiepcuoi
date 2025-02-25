@@ -47,15 +47,13 @@ body {
 
 .names {
     font-family: 'Dancing Script', cursive;
-    font-size: 4.5rem;
+    font-size: 1.8rem;
     margin-bottom: 20px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    animation: fadeInDown 1.5s;
-    background: linear-gradient(45deg, var(--pink-medium), var(--pink-light));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+    text-align: center;
+    white-space: nowrap;
+    color: #FF69B4;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    padding: 0 10px;
 }
 
 @keyframes fadeInDown {
@@ -578,8 +576,9 @@ footer {
     }
 
     .names {
-        font-size: 2.5rem;
-        padding: 0 20px;
+        font-size: 1.5rem;
+        color: #FF69B4;
+        text-shadow: none;
     }
 
     .wedding-date {
@@ -728,7 +727,7 @@ footer {
 /* Extra Small Devices */
 @media (max-width: 480px) {
     .names {
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
 
     .wedding-date {
@@ -1542,10 +1541,6 @@ footer {
 
     .countdown-numbers .countdown-item span {
         font-size: 1.4em;
-    }
-
-    .countdown-numbers .countdown-item p {
-        font-size: 0.7em;
     }
 
     .calendar-header h2 {
