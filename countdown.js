@@ -237,4 +237,116 @@ function updateCountdown() {
 // Cập nhật mỗi giây
 setInterval(updateCountdown, 1000);
 // Chạy ngay khi tải trang
-updateCountdown(); 
+updateCountdown();
+
+// Xử lý hiệu ứng fade-in khi scroll
+const observerOptions = {
+    root: null,
+    threshold: 0.1, // Hiệu ứng sẽ kích hoạt khi phần tử hiện 10%
+    rootMargin: "0px 0px -50px 0px" // Kích hoạt sớm hơn một chút
+};
+
+const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            // Ngừng theo dõi sau khi đã hiển thị
+            observer.unobserve(entry.target);
+        }
+    });
+};
+
+// Khởi tạo Intersection Observer
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+// Theo dõi tất cả các phần tử có class fade-in-section
+document.addEventListener('DOMContentLoaded', function() {
+    const fadeElements = document.querySelectorAll('.fade-in-section');
+    fadeElements.forEach(element => observer.observe(element));
+});
+
+// Fallback cho trình duyệt không hỗ trợ Intersection Observer
+if (!('IntersectionObserver' in window)) {
+    const fadeElements = document.querySelectorAll('.fade-in-section');
+    fadeElements.forEach(element => {
+        element.classList.add('is-visible');
+    });
+}
+
+// Thêm hàm tạo trái tim bay
+function createFloatingHeart() {
+    const heart = document.createElement('i');
+    heart.className = 'fas fa-heart floating-heart';
+    
+    // Random màu sắc
+    const colors = ['color1', 'color2', 'color3'];
+    heart.classList.add(colors[Math.floor(Math.random() * colors.length)]);
+    
+    // Random vị trí bắt đầu
+    const startPosition = Math.random() * window.innerWidth;
+    heart.style.left = `${startPosition}px`;
+    
+    // Random kích thước
+    const size = Math.random() * (30 - 10) + 10;
+    heart.style.fontSize = `${size}px`;
+    
+    // Random thời gian animation
+    const animationDuration = Math.random() * (8 - 4) + 4;
+    heart.style.animationDuration = `${animationDuration}s`;
+    
+    // Thêm vào body
+    document.body.appendChild(heart);
+    
+    // Xóa heart sau khi animation kết thúc
+    heart.addEventListener('animationend', () => {
+        heart.remove();
+    });
+}
+
+// Tạo trái tim mới mỗi 300ms
+let heartInterval;
+
+function startFloatingHearts() {
+    // Xóa interval cũ nếu có
+    if (heartInterval) {
+        clearInterval(heartInterval);
+    }
+    // Tạo interval mới
+    heartInterval = setInterval(createFloatingHeart, 300);
+}
+
+// Khởi tạo ngay khi trang load xong
+window.addEventListener('load', function() {
+    startFloatingHearts();
+    adjustHeartDensity();
+});
+
+// Tạo một trái tim ngay lập tức để kiểm tra
+createFloatingHeart();
+
+// Tối ưu hiệu năng bằng cách tạm dừng animation khi tab không active
+document.addEventListener('visibilitychange', function() {
+    const hearts = document.querySelectorAll('.floating-heart');
+    if (document.hidden) {
+        hearts.forEach(heart => {
+            heart.style.animationPlayState = 'paused';
+        });
+    } else {
+        hearts.forEach(heart => {
+            heart.style.animationPlayState = 'running';
+        });
+    }
+});
+
+// Điều chỉnh số lượng trái tim dựa trên kích thước màn hình
+function adjustHeartDensity() {
+    const width = window.innerWidth;
+    if (width < 768) {
+        // Giảm tần suất tạo trái tim trên mobile
+        clearInterval(heartInterval);
+        heartInterval = setInterval(createFloatingHeart, 500);
+    } else {
+        clearInterval(heartInterval);
+        heartInterval = setInterval(createFloatingHeart, 300);
+    }
+} 

@@ -17,16 +17,18 @@
     <audio id="bgMusic" loop autoplay>
         <source src="ido.mp3" type="audio/mp3">
     </audio>
+    <!-- Thêm script cho floating hearts -->
+    <script defer src="countdown.js"></script>
 </head>
 
 <body>
     <div class="hero-section">
         <div class="overlay">
-            <img src="https://cdn.pixabay.com/photo/2020/09/19/09/40/sunset-5584004_1280.jpg"
+            <img src="./asset/photo_1.jpg"
                 style="width: 100%; height: 100%; object-fit: cover;" alt="">
         </div>
         <div class="hero-content">
-            <h1 class="names">Ngọc Tú & Minh Quân</h1>
+            <h1 class="names">Ngọc Tú & Nguyễn Quân</h1>
             <p class="wedding-date">08.03.2024</p>
             <div class="countdown">
                 <div class="countdown-item">
@@ -50,11 +52,11 @@
     </div>
 
     <div class="wedding-card">
-        <section class="couple-section">
+        <section class="couple-section fade-in-section">
             <div class="couple-info">
                 <div class="bride">
                     <div class="avatar">
-                        <img src="https://cdn.pixabay.com/photo/2016/06/29/04/17/wedding-dress-1485984_1280.jpg" alt=""
+                        <img src="./asset/photo_10.jpg" alt=""
                             style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" />
                     </div>
                     <h3>Ngọc Tú</h3>
@@ -67,24 +69,24 @@
                 </div>
                 <div class="groom">
                     <div class="avatar">
-                        <img src="https://cdn.pixabay.com/photo/2016/06/29/04/17/wedding-dress-1485984_1280.jpg" alt=""
+                        <img src="./asset/photo_11.jpg" alt=""
                             style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" />
                     </div>
-                    <h3>Trần Minh Quân</h3>
-                    <p>Con trai trưởng của</p>
-                    <p>Ông bà: Trần Văn X</p>
-                    <p>& Trần Thị Y</p>
+                    <h3>Nguyễn Quân</h3>
+                    <p>Con trai út</p>
+                    <p>Ông bà: Nguyễn Hữu Hà</p>
+                    <p>& Nguyễn Thị Nhị</p>
                 </div>
             </div>
         </section>
 
-        <section class="event-details">
+        <section class="event-details fade-in-section">
             <div class="event-card">
                 <i class="fas fa-ring"></i>
                 <h3>Địa chỉ đám cưới nhà trai</h3>
-                <p class="time">09:00 AM - 20.10.2024</p>
-                <p class="location">Nhà thờ Lớn Hà Nội</p>
-                <p class="address">40 Phố Nhà Chung, Hoàn Kiếm, Hà Nội</p>
+                <p class="time">16:30 - 08/03/2025</p>
+                <p class="location">Sài Sơn - Quốc Oai</p>
+                <p class="address">Xóm 1 đường chùa Thầy, Thụy Khuê, Sài Sơn</p>
                 <button class="map-btn">
                     <i class="fas fa-map-marker-alt"></i>
                     Xem bản đồ
@@ -94,9 +96,9 @@
             <div class="event-card">
                 <i class="fas fa-glass-cheers"></i>
                 <h3>Địa chỉ đám cưới nhà gái </h3>
-                <p class="time">11:30 AM - 20.10.2024</p>
-                <p class="location">JW Marriott Hanoi</p>
-                <p class="address">8 Đỗ Đức Dục, Nam Từ Liêm, Hà Nội</p>
+                <p class="time">16:30 - 08.03.2025</p>
+                <p class="location">Ngọc Liệp - Quốc Oai</p>
+                <p class="address">Xóm 3 Đồng Bụt, Ngọc Liệp, Quốc Oai</p>
                 <button class="map-btn">
                     <i class="fas fa-map-marker-alt"></i>
                     Xem bản đồ
@@ -104,12 +106,12 @@
             </div>
         </section>
 
-        <section class="love-story">
+        <section class="love-story fade-in-section">
             <h2>Câu Chuyện Tình Yêu</h2>
             <div class="timeline">
                 <div class="story-item">
                     <div class="story-image">
-                        <img src="https://images.pexels.com/photos/1024960/pexels-photo-1024960.jpeg" alt="Lần đầu gặp gỡ">
+                        <img src="./asset/photo_3.jpg" alt="Lần đầu gặp gỡ">
                     </div>
                     <div class="story-content">
                         <div class="date">15.08.2020</div>
@@ -119,7 +121,7 @@
                 </div>
                 <div class="story-item">
                     <div class="story-image">
-                        <img src="https://images.pexels.com/photos/3052361/pexels-photo-3052361.jpeg" alt="Hẹn hò đầu tiên">
+                        <img src="./asset/photo_12.jpg" alt="Hẹn hò đầu tiên">
                     </div>
                     <div class="story-content">
                         <div class="date">25.12.2020</div>
@@ -129,7 +131,7 @@
                 </div>
                 <div class="story-item">
                     <div class="story-image">
-                        <img src="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg" alt="Cầu hôn">
+                        <img src="./asset/photo_7.jpg" alt="Cầu hôn">
                     </div>
                     <div class="story-content">
                         <div class="date">14.02.2023</div>
@@ -140,7 +142,7 @@
             </div>
         </section>
 
-        <section class="calendar-section">
+        <section class="calendar-section fade-in-section">
             <div class="calendar-wrapper">
                 <div class="calendar-header">
                     <h2>MARCH / 2025</h2>
@@ -198,44 +200,44 @@
             </div>
         </section>
 
-        <section class="gallery">
+        <section class="gallery fade-in-section">
             <h2>Album Ảnh Cưới</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://cdn.pixabay.com/photo/2019/02/08/22/28/valentines-day-3984154_1280.jpg" alt="">
+                    <img src="./asset/photo_3.jpg" alt="">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://cdn.pixabay.com/photo/2019/02/08/22/28/valentines-day-3984154_1280.jpg" alt="">
+                    <img src="./asset/photo_4.jpg" alt="">
 
                 </div>
                 <div class="gallery-item">
-                    <img src="https://cdn.pixabay.com/photo/2019/02/08/22/28/valentines-day-3984154_1280.jpg" alt="">
+                    <img src="./asset/photo_5.jpg" alt="">
 
                 </div>
                 <div class="gallery-item">
-                    <img src="https://cdn.pixabay.com/photo/2019/02/08/22/28/valentines-day-3984154_1280.jpg" alt="">
+                    <img src="./asset/photo_2.jpg" alt="">
 
                 </div>
                 <div class="gallery-item">
-                    <img src="https://cdn.pixabay.com/photo/2019/02/08/22/28/valentines-day-3984154_1280.jpg" alt="">
+                    <img src="./asset/photo_6.jpg" alt="">
 
                 </div>
                 <div class="gallery-item">
-                    <img src="https://cdn.pixabay.com/photo/2019/02/08/22/28/valentines-day-3984154_1280.jpg" alt="">
+                    <img src="./asset/photo_12.jpg" alt="">
 
                 </div>
                 <div class="gallery-item">
-                    <img src="https://cdn.pixabay.com/photo/2019/02/08/22/28/valentines-day-3984154_1280.jpg" alt="">
+                    <img src="./asset/photo_8.jpg" alt="">
 
                 </div>
                 <div class="gallery-item">
-                    <img src="https://cdn.pixabay.com/photo/2019/02/08/22/28/valentines-day-3984154_1280.jpg" alt="">
+                    <img src="./asset/photo_9.jpg" alt="">
 
                 </div>
             </div>
         </section>
 
-        <section class="wishes-section">
+        <section class="wishes-section fade-in-section">
             <div class="wishes-wrapper">
                 <div class="form-container">
                     <h2 class="wish-title">Gửi Lời Chúc</h2>
@@ -254,27 +256,27 @@
             </div>
         </section>
 
-        <section class="mung-cuoi-section">
+        <section class="mung-cuoi-section fade-in-section">
             <h2>Hộp Mừng Cưới</h2>
             <div class="mung-cuoi-container">
                 <div class="mung-cuoi-item">
                     <div class="bank-info">
-                        <h3>Chú Rể: Trần Minh Quân</h3>
-                        <p>Ngân hàng: Vietcombank</p>
-                        <p>STK: 1234567890</p>
+                        <h3>Chú Rể: Nguyễn Quân</h3>
+                        <p>Ngân hàng: MB Bank</p>
+                        <p>STK: 2266121997</p>
                     </div>
                     <div class="qr-code">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=1234567890" alt="QR Chú rể">
+                        <img src="./asset/qr_t.jpg" alt="QR Chú rể">
                     </div>
                 </div>
                 <div class="mung-cuoi-item">
                     <div class="bank-info">
                         <h3>Cô Dâu: Ngọc Tú</h3>
-                        <p>Ngân hàng: Techcombank</p>
-                        <p>STK: 0987654321</p>
+                        <p>Ngân hàng: BIDV</p>
+                        <p>STK: 4520498210</p>
                     </div>
                     <div class="qr-code">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=0987654321" alt="QR Cô dâu">
+                        <img src="./asset/qr_g.jpg" alt="QR Cô dâu">
                     </div>
                 </div>
             </div>
@@ -284,7 +286,7 @@
 
     <footer>
         <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.facebook.com/ngoc.tu.271646"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
@@ -319,7 +321,7 @@
         btn.addEventListener('click', function(e) {
             e.preventDefault();
             const locationType = this.closest('.event-card').querySelector('h3').textContent.includes('nhà trai') 
-                ? 'https://maps.app.goo.gl/oinNyNBqFAzxMbXB6'  // Link địa chỉ nhà trai 
+                ? 'https://maps.app.goo.gl/CfMkX52qGLVQGJa89'  // Link địa chỉ nhà trai 
                 : 'https://maps.app.goo.gl/oinNyNBqFAzxMbXB6'; // Link địa chỉ nhà gái
             
             window.open(locationType, '_blank');
